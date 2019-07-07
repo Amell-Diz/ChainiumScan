@@ -1,0 +1,15 @@
+<div class="container-fluid" id="Search-Bar">
+    <div class="search-bar">
+        <div class="well bg-transparent"> 
+            <div class="input-group">
+                <input type="text" class="form-control bg-transparent" id="UserInput" onkeyup="SearchBar()" 
+                [(ngModel)]="search_"placeholder="Search by Block / Transaction / Address / Account / Asset / Validator">
+                <div class="search-bar-button">
+                    <button class="btn btn-default" type="submit" (click)="searchSubmit()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

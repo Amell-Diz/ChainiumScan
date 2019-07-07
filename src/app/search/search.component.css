@@ -1,0 +1,46 @@
+/* First div containing whole search bar */
+#Search-Bar{
+    padding: 0px 0px;
+}
+
+.search-bar{
+    background-color: #414549;
+    padding: 4px 16px;
+    border-radius: 24px;
+    width: 35vw;
+}
+
+.form-control {
+    border: 0px!important;
+}
+
+.btn {
+    color: white;
+    font-family: averta;
+}
+
+.btn:hover{
+    text-decoration: underline;
+    color: #ec6608;
+}
+
+input {
+    color: whitesmoke!important;
+}
+
+.input-group {
+    color: red;
+}
+
+::placeholder {
+  color: #979da3;
+  font-size: 14px;
+  font-family: averta;
+}
+
+@media (max-width: 991px) {
+    .search-bar {
+        width: 100%;
+    }
+}
+

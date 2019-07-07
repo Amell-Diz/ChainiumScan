@@ -1,0 +1,23 @@
+<div class="container-fluid row" id="txContainer">
+  <table class="table table-fixed">
+    <thead>
+      <tr>
+        <th class="col-12 d-flex justify-content-center table-header"><h4>Latest Transactions</h4></th>
+      </tr>
+      <tr>
+        <th class="col-4">Transaction <br> Hash</th>
+        <th class="col-3">Block<br>number</th>
+        <th class="col-3">Sender<br>address</th>
+        <th class="col-2 d-flex justify-content-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tr of latestTransactions | slice:0:50; let i=index;">
+        <td class="col-4">#<a routerLink="tx-info/{{tr.hash}}">{{tr.hash | slice: 0:15}}...</a></td>
+        <td class="col-3"><i class="fa fa-cube"></i> <a routerLink="blocks/{{tr.blockNumber}}"> {{tr.blockNumber}}</a></td>
+        <td class="col-3">{{tr.senderAddress | slice:0:15}}...</td>
+        <td class="col-2 d-flex justify-content-center">{{tr.numberOfActions}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

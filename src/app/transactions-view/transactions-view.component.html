@@ -1,0 +1,16 @@
+<h3>Transactions list</h3>
+<button (click)="limit=5">5</button>
+<button (click)="limit=50">50</button>
+<button (click)="limit=100">100</button>
+
+<div *ngFor="let tr of latestTransactions;let i=index">
+  <div *ngIf="i<=limit">
+    <p>Transaction hash:<a routerLink="/tx-info/{{tr.hash}}">{{tr.hash | slice: 0:15}}...</a></p>
+    <p>Block number: <a routerLink="/blocks/{{tr.blockNumber}}">{{tr.blockNumber}}</a></p>
+    <p>timestamp: {{tr.timestamp}}</p>
+    <p>Sender address:{{tr.senderAddress | slice: 0:15 }}...</p>
+    <p>Number of actions: {{tr.numberOfActions}}</p>
+    <hr>
+  </div>
+</div>
+

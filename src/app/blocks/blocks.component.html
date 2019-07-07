@@ -1,0 +1,23 @@
+<div class="container-fluid row" id="blockContainer">
+  <table class="table table-fixed">
+    <thead>
+      <tr>
+        <th class="col-12 d-flex justify-content-center table-header"><h4>Latest Blocks</h4></th>
+      </tr>
+      <tr>
+        <th class="col-4">Block <br>Number</th>
+        <th class="col-5">Block <br>Hash</th>
+        <th class="col-3">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let block of latestBlocks | slice:0:100;">
+        <td class="col-4"><i class="fa fa-cube"></i><a routerLink="blocks/{{block.blockNumber}}"> {{block.blockNumber}}</a></td>
+        <td class="col-5">#{{block.hash | slice:0:20}}</td>
+        <td class="col-3">{{block.timestamp | date : 'H:mm:ss' : '+0400'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+       

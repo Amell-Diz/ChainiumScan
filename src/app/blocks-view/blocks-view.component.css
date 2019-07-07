@@ -1,0 +1,95 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Main Area */
+#mainBg {
+  height: 100vh;
+  width: 80vw;
+  margin: 0px auto;
+}
+
+#second-row { 
+padding-top: 4rem;
+}
+
+.wrapBg {
+  border-radius: 16px 16px 0px 0px;
+  width: 100%;
+
+}
+
+#canvas {
+  width: 100%;
+}
+
+#graphBg {
+  position: fixed;
+  height: 25vh;
+  width: 50vw;
+}
+
+#blockContainer {
+width: 70vw;
+margin: 4rem auto;
+height: 80vh;
+}
+.table-header {
+  background-image: linear-gradient(#EC6608, #db8c2b);
+  border-radius: 8px 8px 0px 0px;
+}
+
+.table-fixed {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.table-fixed tbody {
+  height: 62vh;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.table-fixed thead {
+  overflow-x: auto;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td {
+  float: left;
+  overflow-x: hidden;
+}
+.table-fixed thead tr th {
+  float: left;
+  background-color: #ffffff;
+  border-color: white;
+}
+
+.table-fixed thead tr th.table-header {
+  border-color: #db8c2b;
+}
+
+.table-fixed tbody tr td a {
+color: #39A2AE;
+text-decoration: none;
+}
+.table-fixed tbody tr td a:hover {
+color: rgb(43, 128, 138);
+}
+.ngx-pagination {
+  padding: 0px!important;
+}
+
+.myPagination /deep/ .ngx-pagination {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.myPagination /deep/ .ngx-pagination .current{
+  background: #39A2AE;
+}
+
+

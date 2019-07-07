@@ -1,0 +1,65 @@
+
+<h4>Block transactions:</h4>
+
+
+<div class="container d-flex justify-content-center" id="blockContainer">
+    <table class="table table-fixed">
+        <thead>
+            <tr>
+                <th class="col-12 d-flex justify-content-center table-header">
+                    <h4>Block List</h4>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-3">Block number: </td>
+                <td class="col-9">{{block_.blockNumber}}</td>
+            </tr>
+            <tr>
+                <td class="col-3">Block hash: </td>
+                <td class="col-9">{{block_.hash}}</td>
+            </tr>
+            <tr>
+                <td class="col-3">Previous block number: </td>
+                <td class="col-9"><a routerLink="/blocks/{{blockNumber}}">{{blockNumber_-1}}</a></td>
+            </tr>
+            <tr>
+                <td class="col-3">Previous block hash: </td>
+                <td class="col-9">{{prevBlock.hash}}</td>
+            </tr>
+            <tr>
+                <td class="col-3">Time created: </td>
+                <td class="col-9">{{block_.timestamp}}</td>
+            </tr>
+            <tr>
+                <td class="col-3">Block timestamp: </td>
+                <td class="col-9">{{block_.timestamp}}</td>
+            </tr>
+            <tr>
+                <td class="col-3">Validator address: </td>
+                <td class="col-9">{{block_.validatorAddress}}</td>
+            </tr>
+            <!-- <tr>
+                <td class="col-6">Transaction set root: </td>
+                <td class="col-6">{{block_.txSetRoot}}</td>
+            </tr> -->
+            <!-- <tr>
+                <td class="col-6">Transaction result set root:  </td>
+                <td class="col-6">{{block_.txResultSetRoot}}</td>
+            </tr> -->
+            <tr>
+                <td class="col-3">State root:  </td>
+                <td class="col-9">{{block_.stateRoot}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngFor="let tr of blockTransactions">
+  <p>Transaction hash: {{tr.hash}}</p>
+  <p>Block number:{{tr.blockNumber}}</p>
+  <p>Sender address: <a routerLink="/addresses/{{tr.senderAddress}}">{{tr.senderAddress}}</a></p>
+  <p>timestamp: {{tr.timestamp}}</p>
+  <p>Number of actions: {{tr.numberOfActions}}</p>
+  <hr>
+</div>
+</div>

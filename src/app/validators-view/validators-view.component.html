@@ -1,0 +1,6 @@
+<h3>Validators</h3>
+<div *ngFor="let val of validators">
+  <p>Blockchainaddress: <a routerLink="/validators/{{val.blockchainAddress}}">{{val.blockchainAddress}}</a></p>
+  <p>Is active: {{val.isActive}}</p>
+  <hr>
+</div>
