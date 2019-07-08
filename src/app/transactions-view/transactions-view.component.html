@@ -1,3 +1,4 @@
+<!--
 <h3>Transactions list</h3>
 <button (click)="limit=5">5</button>
 <button (click)="limit=50">50</button>
@@ -5,7 +6,7 @@
 
 <div *ngFor="let tr of latestTransactions;let i=index">
   <div *ngIf="i<=limit">
-    <p>Transaction hash:<a routerLink="/tx-info/{{tr.hash}}">{{tr.hash | slice: 0:15}}...</a></p>
+    <p>Transaction hash:<a routerLink="/transactions/{{tr.hash}}">{{tr.hash | slice: 0:15}}...</a></p>
     <p>Block number: <a routerLink="/blocks/{{tr.blockNumber}}">{{tr.blockNumber}}</a></p>
     <p>timestamp: {{tr.timestamp}}</p>
     <p>Sender address:{{tr.senderAddress | slice: 0:15 }}...</p>
@@ -14,3 +15,43 @@
   </div>
 </div>
 
+
+<th class="col-4">Transaction <br> Hash</th>
+<th class="col-3">Block<br>number</th>
+<th class="col-3">Sender<br>address</th>
+<th class="col-2 d-flex justify-content-center">Actions</th>
+
+-->
+<div class="container d-flex justify-content-center" id="blockContainer">
+    <table class="table table-fixed">
+      <thead>
+        <tr>
+          <th class="col-12 d-flex justify-content-center table-header"><h4>Transactions List</h4></th>
+        </tr>
+        <tr>
+          <th class="col-4">Transaction hash</th>
+          <th class="col-2">Block number</th>
+          <th class="col-2">Timestamp</th>
+          <th class="col-2">Sender address</th>
+          <th class="col-2 d-flex justify-content-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--
+        <tr *ngFor="let block of latestBlocks | paginate: { itemsPerPage: 12, currentPage: p}">
+          <td class="col-4"><i class="fa fa-cube"></i><a routerLink="/blocks/{{block.blockNumber}}"> {{block.blockNumber}}</a></td>
+          <td class="col-6">#{{block.hash | slice:0:15}}</td>
+          <td class="col-2 d-flex justify-content-center">{{block.timestamp | date : 'H:mm:ss' : '+0400'}}</td>
+        </tr>
+        -->
+        <tr *ngFor="let tr of latestTransactions | paginate: { itemsPerPage: 12, currentPage: p}">
+          <td class="col-4"><a routerLink="/transactions/{{tr.hash}}">{{tr.hash | slice: 0:15}}...</a></td>
+          <td class="col-2"><a routerLink="/blocks/{{tr.blockNumber}}">{{tr.blockNumber}}</a></td>
+          <td class="col-2">{{tr.timestamp}}</td>
+          <td class="col-2">{{tr.senderAddress | slice: 0:15 }}..</td>
+          <td class="col-2 d-flex justify-content-center">{{tr.numberOfActions}}</td>
+        </tr>
+      </tbody>
+      <pagination-controls (pageChange)="p = $event" class="d-flex justify-content-center myPagination"></pagination-controls>
+    </table>
+  </div>

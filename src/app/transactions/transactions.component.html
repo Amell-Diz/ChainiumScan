@@ -13,7 +13,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let tr of latestTransactions | slice:0:50; let i=index;">
-        <td class="col-4">#<a routerLink="tx-info/{{tr.hash}}">{{tr.hash | slice: 0:15}}...</a></td>
+        <td class="col-4">#<a routerLink="transactions/{{tr.hash}}">{{tr.hash | slice: 0:15}}...</a></td>
         <td class="col-3"><i class="fa fa-cube"></i> <a routerLink="blocks/{{tr.blockNumber}}"> {{tr.blockNumber}}</a></td>
         <td class="col-3">{{tr.senderAddress | slice:0:15}}...</td>
         <td class="col-2 d-flex justify-content-center">{{tr.numberOfActions}}</td>

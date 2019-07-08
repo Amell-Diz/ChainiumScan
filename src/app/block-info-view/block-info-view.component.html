@@ -1,13 +1,12 @@
 
-<h4>Block transactions:</h4>
-
+<h4>Block info:</h4>
 
 <div class="container d-flex justify-content-center" id="blockContainer">
     <table class="table table-fixed">
         <thead>
             <tr>
                 <th class="col-12 d-flex justify-content-center table-header">
-                    <h4>Block List</h4>
+                    <h4>Block info</h4>
                 </th>
             </tr>
         </thead>
@@ -55,11 +54,11 @@
         </tbody>
     </table>
     <div *ngFor="let tr of blockTransactions">
-  <p>Transaction hash: {{tr.hash}}</p>
-  <p>Block number:{{tr.blockNumber}}</p>
-  <p>Sender address: <a routerLink="/addresses/{{tr.senderAddress}}">{{tr.senderAddress}}</a></p>
-  <p>timestamp: {{tr.timestamp}}</p>
-  <p>Number of actions: {{tr.numberOfActions}}</p>
-  <hr>
-</div>
+        <p>Transaction hash: {{tr.hash}}</p>
+        <p>Block number:{{tr.blockNumber}}</p>
+        <p>Sender address: <a routerLink="/addresses/{{tr.senderAddress}}">{{tr.senderAddress}}</a></p>
+        <p>timestamp: {{tr.timestamp}}</p>
+        <p>Number of actions: {{tr.numberOfActions}}</p>
+        <hr>
+    </div>
 </div>

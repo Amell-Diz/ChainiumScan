@@ -1,6 +1,37 @@
+<!--
 <h3>Validators</h3>
 <div *ngFor="let val of validators">
   <p>Blockchainaddress: <a routerLink="/validators/{{val.blockchainAddress}}">{{val.blockchainAddress}}</a></p>
   <p>Is active: {{val.isActive}}</p>
   <hr>
 </div>
+
+-->
+
+<div class="container d-flex justify-content-center" id="blockContainer">
+    <table class="table table-fixed">
+      <thead>
+        <tr>
+          <th class="col-12 d-flex justify-content-center table-header"><h4>Validators List</h4></th>
+        </tr>
+        <tr>
+          <th class="col-6">Blockchain address</th>
+          <th class="col-6">Is active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--
+        <tr *ngFor="let block of latestBlocks | paginate: { itemsPerPage: 12, currentPage: p}">
+          <td class="col-4"><i class="fa fa-cube"></i><a routerLink="/blocks/{{block.blockNumber}}"> {{block.blockNumber}}</a></td>
+          <td class="col-6">#{{block.hash | slice:0:15}}</td>
+          <td class="col-2 d-flex justify-content-center">{{block.timestamp | date : 'H:mm:ss' : '+0400'}}</td>
+        </tr>
+        -->
+        <tr *ngFor="let val of validators">
+          <td class="col-6"><a routerLink="/validators/{{val.blockchainAddress}}">{{val.blockchainAddress}}</a></td>
+          <td class="col-6">{{val.isActive}}</td>
+        </tr>
+      </tbody>
+      <pagination-controls (pageChange)="p = $event" class="d-flex justify-content-center myPagination"></pagination-controls>
+    </table>
+  </div>

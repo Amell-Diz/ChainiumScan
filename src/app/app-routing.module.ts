@@ -13,8 +13,7 @@ import { ValidatorInfoViewComponent } from './validator-info-view/validator-info
 const routes: Routes = [
   { path: '', component: MainViewComponent },
   { path: 'blocks/:num', component: BlockInfoViewComponent },
-  { path: 'blocks-view', component: BlockInfoViewComponent },
-  { path: 'tx-info/:hash', component: TxInfoViewComponent },
+  { path: 'transactions/:hash', component: TxInfoViewComponent },
   { path: 'blocks', component: BlocksViewComponent },
   { path: 'transactions', component: TransactionsViewComponent },
   { path: 'validators', component: ValidatorsViewComponent },
