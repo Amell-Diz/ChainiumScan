@@ -1,53 +1,29 @@
 *{
     padding: 0px;
     margin: 0px;
+    color: var(--textColor);
+  }
+  h5 b{
+    color: var(--textColorDark);
   }
   
-  /* Main Area */
-  #mainBg {
-    height: 100vh;
-    width: 80vw;
-    margin: 0px auto;
+  #mainArea {
+      margin: 4rem auto;
+      width: 70vw;
   }
-  
-  #second-row { 
-  padding-top: 4rem;
-  }
-  
-  .wrapBg {
-    border-radius: 16px 16px 0px 0px;
-    width: 100%;
-  
-  }
-  
-  #canvas {
-    width: 100%;
-  }
-  
-  #graphBg {
-    position: fixed;
-    height: 25vh;
-    width: 50vw;
-  }
-  
-  #blockContainer {
-  width: 70vw;
-  margin: 4rem auto;
-  height: 80vh;
-  }
-  .table-header {
-    background-image: linear-gradient(#EC6608, #db8c2b);
-    border-radius: 8px 8px 0px 0px;
-  }
+
+#firstTable { 
+    margin-bottom: 4rem;
+}
   
   .table-fixed {
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--bg-dark);
     border-radius: 16px 16px 0px 0px;
+
   }
   
   .table-fixed tbody {
-
     overflow-y: hidden;
     width: 100%;
   }
@@ -61,15 +37,23 @@
   .table-fixed tbody td {
     float: left;
     overflow-x: hidden;
+    background-color: var(--bg-lighter);
+ 
   }
   .table-fixed thead tr th {
     float: left;
-    background-color: #ffffff;
-    border-color: white;
   }
   
-  .table-fixed thead tr th.table-header {
-    border-color: #db8c2b;
+  .table-fixed .table-headerLv1{
+    background-color: var(--bg-lighter);
+    margin-bottom: 8px;
+    border-color: var(--bg-dark);
+    color: white;
+  }
+  .table-fixed .table-headerLv2{
+    background-color: white;
+    background-image: linear-gradient(#EC6608, #db8c2b);
+    border-top: none;
   }
   
   .table-fixed tbody tr td a {
@@ -79,18 +63,81 @@
   .table-fixed tbody tr td a:hover {
   color: rgb(43, 128, 138);
   }
-  .ngx-pagination {
-    padding: 0px!important;
+
+
+
+  #basicInfoH {
+    border-right: 4px solid var(--bg-dark);
+    border-bottom: 0.5px solid var(--bg-lighter);
+    border-radius: 16px 16px 0 0;
+  }
+
+  .cells { 
+      border-top: none;
+  }
+
+  .cellsLeft {
+      border-right: 4px solid var(--bg-dark);
+  }
+
+  .cellsRight {
+      border-left: 4px solid var(--bg-dark);
+  }
+
+  #prevBlockNumberH{
+      border-radius: 16px 0 0 0;
   }
   
-  .myPagination /deep/ .ngx-pagination {
-    padding: 0;
-    margin-bottom: 0.5rem;
+  #prevBlockHashH{
+    border-radius: 0 16px 0 0;
   }
-  
-  .myPagination /deep/ .ngx-pagination .current{
-    background: #39A2AE;
-  }
-  
+
+  #blockTimeCellH {
+    border-radius: 0 0 0 12px;
+    border-top: 0.5px solid var(--bg-dark);
+}
+#blockTimeCell {
+    border-radius: 0px 0px 16px 0px;
+    border-top: 0.5px solid var(--bg-dark);
+}
+.cellsHidden {
+    color: white;
+    border-top: none;
+}
+#cellsRightBottomLeft {
+    border-radius: 0 0 0 16px;
+}
+#cellsRightBottomRight {
+    border-radius: 0 0 16px 0;
+}
+#additionalInfo  {
+    background-image: linear-gradient(#EC6608, #db8c2b);
+    border-top: 8px solid var(--bg-dark);
+    border-radius: 16px 16px 0 0;
+    color: var(--textColorDark);
+}
+#additionalInfo b{
+    color: var(--textColorDark);
+}
+
+.cellBorder{ 
+    border-color: #4c5055;
+}
+
+#consensusCellLeft {
+    border-radius: 0 0 0 16px;
+}
+#consensusCellRight {
+    border-radius: 0 0 16px 0;
+}
+
+#txHashCell {
+    border-radius: 0 0 0 16px;
+}
+#actionCell {
+    border-radius: 0 0 16px 0;  
+}
+
+
   
   

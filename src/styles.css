@@ -1,8 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --bg-darkest: #222429;
+    --bg-dark: #2C2E34;
+    --bg-lighter: #414549;
+    --accent: #EC6608;
+    --accentHover: #d45c06;
+    --accentContrast: #39A2AE;
+    --accentContrastHover: #318a94;
+    --textColor: #e5e5e5;
+    --textColorDark: #414549;
+}
+
 
 body{
-  background-color: #2C2E34;
-  background-color: grey;
+  background-color: var(--bg-dark);
 }
 
 @font-face {

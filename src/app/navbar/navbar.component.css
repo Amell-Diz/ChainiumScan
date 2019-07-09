@@ -2,13 +2,13 @@
 #header-holder {
     margin: 0;
     padding: 0;
-    background-color: #222429;
+    background-color: var(--bg-darkest);
 }
 
 img {
     width:145px;
     height: 55px;
-    border-right: 1px solid #ec6608;
+    border-right: 1px solid var(--accent);
 }
 
 #imageBar-holder {
@@ -36,14 +36,14 @@ img {
 
 .individual-link-holder a{
     font-size: 1rem;
-    color: white;
+    color: var(--textColor);
     font-family: averta;
 }
 .individual-link-holder a:hover{
-    color: #ec6608;
+    color: var(--accent);
 }
 .individual-link-holder a:focus{
-    color: #ec6608;
+    color: var(--accent);
 }
 
 #IconLink-holder {
@@ -52,8 +52,8 @@ img {
 
 @media (max-width: 991px){
     .navbar a:hover{
-        background-color: #ec6608;
-        color: white;
+        background-color: var(--accent);
+        color: var(--textColor);
     }
 
     .navbar-brand {
@@ -79,7 +79,7 @@ img {
         margin: 0px;
     }
     .IconLink {
-        border: 1px solid #ec6608;
+        border: 1px solid var(--accent);
     }
 
 }

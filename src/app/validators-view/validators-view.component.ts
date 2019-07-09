@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ValidatorsService } from '../validators.service';
 import { Validator } from '../validator.model';
+import {interval} from 'rxjs';
 
 @Component({
   selector: 'app-validators-view',

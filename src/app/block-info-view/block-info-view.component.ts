@@ -3,6 +3,7 @@ import { Block } from '../block.model';
 import {ActivatedRoute} from "@angular/router";
 import { BlocksService } from "../blocks.service";
 import { Transaction } from '../transaction.model';
+import { TransactionsService } from '../transactions.service';
 
 @Component({
   selector: 'app-block-info-view',
@@ -15,6 +16,7 @@ export class BlockInfoViewComponent implements OnInit {
   private block_:Block=new Block();
   private prevBlock:Block=new Block();
   private blockTransactions:Transaction[];
+
 
   constructor(private route: ActivatedRoute,private blocksService:BlocksService) {
     this.route.params.subscribe( (num => {this.blockNumber_=<number>num['num'];} ));
@@ -48,5 +50,6 @@ export class BlockInfoViewComponent implements OnInit {
     this.getBlockByNumber();
     this.getPrevBlockByNumber();
     this.getBlockTransactions();
+
   }
 }

@@ -1,54 +1,75 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+
+
 *{
     padding: 0px;
     margin: 0px;
+    color: var(--textColor);
 }
 
+h4 {
+    color: var(--textColorDark);
+}
 #blockContainer {
  width: 30vw;
 }
 .table-header {
     background-image: linear-gradient(#EC6608, #db8c2b);
     border-radius: 8px 8px 0px 0px;
+    color: var(--textColorDark);
 }
 
 .table-fixed {
     width: 100%;
-    background-color: #ffffff;
-    border-radius: 16px 16px 0px 0px;
+    background-color: var(--bg-lighter);
+    border-radius: 16px 16px 16px 16px;
+    overflow-x: hidden;
   }
   
 .table-fixed tbody {
-    height: 60vh;
+    height: 67vh;
     overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
-    border-bottom: 16px solid white;
+    /* border-bottom: 8px solid var(--bg-lighter); */
   }
 
-  .table-fixed thead {
-    overflow-x: auto;
-  }
 .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
     display: block;
   }
 .table-fixed tbody td {
     float: left;
-    overflow-x: hidden;
+    overflow-x: scroll;
   }
 .table-fixed thead tr th {
     float: left;
-    background-color: #ffffff;
-    border-color: white;
+    background-color: var(--bg-lighter);
+    border-color: var(--bg-lighter);
   }
 
 .table-fixed thead tr th.table-header {
     border-color: #db8c2b;
+    color: var(--textColorDark);
 }
 
 .table-fixed tbody tr td a {
-  color: #39A2AE;
+  color: var(--accentContrast);
   text-decoration: none;
 }
 .table-fixed tbody tr td a:hover {
-  color: rgb(43, 128, 138);
+  color: var(--accentContrastHover);
 }
 
+.cellBorder{ 
+    border-color: #4c5055;
+}
+b {
+    color: var(--textColorDark);
+}

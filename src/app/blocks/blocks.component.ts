@@ -14,6 +14,8 @@ export class BlocksComponent implements OnInit {
 
   latestBlocks:Block[]=new Array;
 
+  timer=interval(3000);
+
   constructor(private blocksService:BlocksService) { }
 
   ngOnInit() {
@@ -21,10 +23,15 @@ export class BlocksComponent implements OnInit {
   }
 
   getLatestBlocks(){
-    this.blocksService.getLatestBlocks().subscribe(
-      (blocks:Block[])=>{
-        this.latestBlocks=blocks;
-      }
+    this.timer.subscribe(
+        ()=>{
+        this.blocksService.getLatestBlocks().subscribe(
+            (blocks:Block[])=>{
+                this.latestBlocks=blocks;
+            }
+            )
+        }
     )
+    
   }
 }

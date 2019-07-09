@@ -1,6 +1,6 @@
 
 #footer-section{
-    background-color: #222429;
+    background-color: var(--bg-darkest);
     position: relative;
 
     height: 25%;
@@ -9,13 +9,13 @@
 
 #footer-window-left{
     padding-top: 2rem;
-    color: white;
+    color: var(--textColor);
     font-size: 14px;
     padding-left: 2rem;
 }
 
 #footer-window-right{
-    color: white;
+    color: var(--textColor);
 }
 
 .row-height {
@@ -33,17 +33,17 @@
 
 .btn {
     padding: 16px 16px;
-    background-color:#EC6608;
+    background-color:var(--accent);
     width: 100%;
     border-radius: 8px;
 }
 
 .btn:hover{
-    border: 1px solid white;
+    border: 1px solid var(--textColor);
 }
 
 .btn a {
-    color: white;
+    color: var(--textColor);
 }
 
 
@@ -71,7 +71,7 @@
 }
 
 .card {
-    background-color: #EC6608;
+    background-color: var(--accent);
     border-radius: 6px;  
     height: 100px; 
     width: 175px;
@@ -83,14 +83,19 @@
 }
 
 #footer-window-left a{
-    color: #EC6608;
+    color: var(--accent);
+    text-decoration: none;
+}
+#footer-window-left a:hover{
+    color: var(--accentHover);
+    text-decoration: none;
 }
 .card-text a{
-    color: white;
+    color: var(--textColor);
 }
 
 .card-text a:hover{
-    color: #EC6608;
+    color: var(--accent);
 }
 
 @media(max-width: 1236px) {

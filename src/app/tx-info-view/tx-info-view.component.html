@@ -1,7 +1,98 @@
-<p>Hash: {{tx.hash}}</p>
-<p>Block number: <a routerLink="/blocks/{{tx.blockNumber}}">{{tx.blockNumber}}</a></p>
-<p>Sender address:<a routerLink="/addresses/{{tx.senderAddress}}">{{tx.senderAddress}}</a></p>
-<p>Timestamp: {{tx.timestamp}}</p>
-<p>Expiriation time: {{tx.expirationTime}}</p>
-<p>Nonce: {{tx.nonce}}</p>
-<p>Action fee: {{tx.actionFee}}</p>
+<div class="container-fluid row" id="mainArea">
+
+        <div class="col-12" id="firstTable">
+            <table class="table table-fixed">
+                <thead>
+                    <tr>
+                        <th class="col-6 table-headerLv2" id="basicInfoH">
+                            <h5><b>Basic Info</b></h5>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-3 cells cellsTop"><b>Transaction Hash</b></td>
+                        <td class="col-3 cells cellsLeft">{{tx.hash | slice:0:20}}</td>
+                        <td class="col-6 cells cellsRight" id="prevBlockNumberH"><b>Sender</b></td>
+                       
+                    </tr>
+                    <tr>
+                        <td class="col-3 cells"><b>Block Number</b></td>
+                        <td class="col-3 cells cellsLeft"><a routerLink="/blocks/{{tx.blockNumber}}" >{{tx.blockNumber}}</a></td>
+                        <td class="col-6 cells cellsRight"><a routerLink="/addresses/{{tx.senderAddress}}">{{tx.senderAddress}}</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="col-3 cells" id="blockTimeCellH">Timestamp</td>
+                        <td class="col-3 cells cellsLeft" id="blockTimeCell">{{tx.timestamp | date:'medium'}}</td>
+                        <td class="col-3 cellsHidden cellsRight" id="cellsRightBottomLeft">Expiration Time</td>
+                        <td class="col-3 cellsHidden" id="cellsRightBottomRight">{{tx.expirationTime}}<i>something</i></td>
+                    </tr>
+                    <tr>
+                        <td class="col-12 d-flex justify-content-center" id="additionalInfo"><b>Additional Info</b></td>
+                    </tr>
+                    <tr>
+                        <td class="col-3 cellBorder">Nonce</td>
+                        <td class="col-9 cellBorder">: {{tx.nonce}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-3 cellBorder" id="actionFeeCell">Action fee</td>
+                        <td class="col-9 cellBorder" id="actionFeeCellValue">: {{tx.actionFee}}</td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="col-3 cellBorder">EQ proofs root</td>
+                        <td class="col-9 cellBorder">: {{block_.equivocationProofsRoot}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-3 cellBorder">EQ proof result root</td>
+                        <td class="col-9 cellBorder">: {{block_.equivocationProofResultsRoot}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-3 cellBorder">State root</td>
+                        <td class="col-9 cellBorder">: {{block_.stateRoot}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-3 cellBorder">Staking rewards root</td>
+                        <td class="col-9 cellBorder">: {{block_.stakingRewardsRoot}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-3 cellBorder">Configuration root</td>
+                        <td class="col-9 cellBorder">: {{block_.configurationRoot}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-3 cellBorder">Consensus round</td>
+                        <td class="col-9 cellBorder">: {{block_.consensusRound}}</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="col-12">
+            <table class="table table-fixed">
+                <tbody>
+                    <tr>
+                        <td class="col-12 d-flex justify-content-center" id="additionalInfo"><b>Actions</b></td>
+                    </tr>
+                    <tr>
+                        <td class="col-6 cellBorder" id="typeCell"><b>Type</b> </td>
+                        <td class="col-6 cellBorder" id="numberCell"><b>Number</b></td>
+                    </tr>
+                    <tr>
+                        <!-- <td class="col-5 cellBorder">{{tr.hash}} </td>
+                        <td class="col-5 cellBorder"><a routerLink="/addresses/{{tr.senderAddress}}">{{tr.senderAddress}}</a></td>
+                        <td class="col-2 cellBorder">{{tr.numberOfActions}}</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+    
+    <!-- <div class="container">
+        <p>Transaction hash: {{tr.hash}}</p>
+        <p>Block number:{{tr.blockNumber}}</p>
+        <a>Sender address: <a routerLink="/addresses/{{tr.senderAddress}}">{{tr.senderAddress}}</a></p>
+        <p>timestamp: {{tr.timestamp}}</p>
+        <p>Number of actions: {{tr.numberOfActions}}</p>
+        <hr>
+    </div> -->
+    

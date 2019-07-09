@@ -1,6 +1,15 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+} 
 *{
   padding: 0px;
   margin: 0px;
+  color: var(--textColor);
 }
 
 /* Main Area */
@@ -42,13 +51,15 @@ height: 80vh;
 
 .table-fixed {
   width: 100%;
-  background-color: #ffffff;
-  border-radius: 16px 16px 0px 0px;
+  background-color: var(--bg-lighter);
+  border-radius: 16px 16px 16px 16px;
+  overflow-x: hidden;
 }
 
 .table-fixed tbody {
   height: 62vh;
-  overflow-y: hidden;
+  overflow-y: auto;
+    overflow-x: hidden;
   width: 100%;
 }
 
@@ -60,24 +71,25 @@ height: 80vh;
 }
 .table-fixed tbody td {
   float: left;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 .table-fixed thead tr th {
   float: left;
-  background-color: #ffffff;
-  border-color: white;
+  background-color: var(--bg-lighter);
+    border-color: var(--bg-lighter);
 }
 
 .table-fixed thead tr th.table-header {
   border-color: #db8c2b;
+  color: var(--textColorDark);
 }
 
 .table-fixed tbody tr td a {
-color: #39A2AE;
+    color: var(--accentContrast);
 text-decoration: none;
 }
 .table-fixed tbody tr td a:hover {
-color: rgb(43, 128, 138);
+    color: var(--accentContrastHover);
 }
 .ngx-pagination {
   padding: 0px!important;
@@ -86,10 +98,26 @@ color: rgb(43, 128, 138);
 .myPagination /deep/ .ngx-pagination {
   padding: 0;
   margin-bottom: 0.5rem;
+  color: var(--textColor);
 }
 
 .myPagination /deep/ .ngx-pagination .current{
-  background: #39A2AE;
+  color: var(--accentContrast);
+  background: var(--bg-lighter);
+}
+.myPagination /deep/ .ngx-pagination a{
+    color: var(--textColor);
+}
+.myPagination /deep/ .ngx-pagination a:hover{
+    color: var(--textColor);
+    background: var(--accentContrastHover);
+    text-decoration: none
 }
 
+b{
+    color: var(--textColorDark);
+}
 
+.cellBorder{ 
+    border-color: #4c5055;
+}

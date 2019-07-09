@@ -16,17 +16,25 @@ export class TransactionsComponent implements OnInit {
     return parseInt(num);
   }
   latestTransactions:Transaction[];
-  constructor(private tranactionsService:TransactionsService) { }
+
+  timer=interval(3000);
+
+  constructor(private transactionsService:TransactionsService) { }
 
   ngOnInit(){
     this.getLatestTransactions();
   }
   getLatestTransactions(){
-    this.tranactionsService.getTransactions().subscribe(
-      (txs:Transaction[])=>{
-        this.latestTransactions=txs;
-      }
-    )
+      this.timer.subscribe(
+          ()=>{
+            this.transactionsService.getTransactions().subscribe(
+                (txs:Transaction[])=>{
+                  this.latestTransactions=txs;
+                }
+              )
+          }
+      )
+    
   }
 
 }
