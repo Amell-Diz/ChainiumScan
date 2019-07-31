@@ -1,0 +1,147 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    color: var(--textColor);
+  }
+  
+  h5 b{
+    color: var(--textColorDark);
+  }
+  
+  #mainArea {
+      margin: 4rem auto;
+      width: 70vw;
+      height: 80vh;
+  }
+
+#firstTable { 
+    margin-bottom: 4rem;
+}
+  
+  .table-fixed {
+    width: 100%;
+    background-color: var(--bg-dark);
+    border-radius: 16px 16px 0px 0px;
+
+  }
+  
+  .table-fixed tbody {
+    overflow-y: hidden;
+    width: 100%;
+  }
+  
+  .table-fixed thead {
+    overflow-x: auto;
+  }
+  .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    display: block;
+  }
+  .table-fixed tbody td {
+    float: left;
+    overflow-x: hidden;
+    background-color: var(--bg-lighter);
+ 
+  }
+  .table-fixed thead tr th {
+    float: left;
+  }
+  
+  .table-fixed .table-headerLv1{
+    background-color: var(--bg-lighter);
+    margin-bottom: 8px;
+    border-color: var(--bg-dark);
+    color: white;
+  }
+  .table-fixed .table-headerLv2{
+    background-color: white;
+    background-image: linear-gradient(#EC6608, #db8c2b);
+    border-top: none;
+  }
+  
+  .table-fixed tbody tr td a {
+  color: #39A2AE;
+  text-decoration: none;
+  }
+  .table-fixed tbody tr td a:hover {
+  color: rgb(43, 128, 138);
+  }
+
+
+
+  #basicInfoH {
+    border-right: 4px solid var(--bg-dark);
+    border-bottom: 0.5px solid var(--bg-lighter);
+    border-radius: 16px 16px 0 0;
+  }
+
+  .cells { 
+      border-top: none;
+  }
+
+  .cellsLeft {
+      border-right: 4px solid var(--bg-dark);
+  }
+
+  .cellsRight {
+      border-left: 4px solid var(--bg-dark);
+  }
+
+  #networkAddressHeader{
+      border-radius: 16px 16px 0 0;
+  }
+  
+  #prevBlockHashH{
+    border-radius: 0 16px 0 0;
+  }
+
+  #activeStatusFlagHeader {
+    border-radius: 0 0 0 12px;
+    border-top: 0.5px solid var(--bg-dark);
+}
+#activeStatusFlagRecord {
+    border-radius: 0px 0px 16px 0px;
+    border-top: 0.5px solid var(--bg-dark);
+}
+.cellsHidden {
+    color: white;
+    border-top: none;
+}
+#sharedRewardHeader {
+    border-top: 0.5px solid var(--bg-dark);
+    border-radius: 0 0 0 16px;
+}
+#sharedRewardRecord {
+    border-top: 0.5px solid var(--bg-dark);
+    border-radius: 0 0 16px 0;
+}
+#listOfStakes  {
+    background-image: linear-gradient(#EC6608, #db8c2b);
+    border-top: 8px solid var(--bg-dark);
+    border-radius: 16px 16px 0 0;
+    color: var(--textColorDark);
+}
+#listOfStakes b{
+    color: var(--textColorDark);
+}
+
+.cellBorder{ 
+    border-color: #4c5055;
+}
+
+#consensusCellLeft {
+    border-radius: 0 0 0 16px;
+}
+#consensusCellRight {
+    border-radius: 0 0 16px 0;
+}
+
+#txHashCell {
+    border-radius: 0 0 0 16px;
+}
+#actionCell {
+    border-radius: 0 0 16px 0;  
+}
+
+
+  
+  

@@ -1,10 +1,72 @@
-<div>
-  <p>Blockchainaddress: {{address.blockchainAddress}}</p>
-  <p>Nonce: {{address.nonce}}</p>
-  <p>ChxBalanceInfo:</p>
-  <hr>
-  <p>Avliable balance: {{address.chxBalanceInfo.availableBalance}}</p>
-  <p>Delegated stakes: {{address.chxBalanceInfo.delegatedStakes}}</p>
-  <p>Validator deposit: {{address.chxBalanceInfo.validatorDeposit}}</p>
-  <p>Total balance: {{address.chxBalanceInfo.totalBalance}}</p>
-</div>
+<div class="container-fluid row" id="mainArea">
+
+    <div class="col-12" id="firstTable">
+        <table class="table table-fixed">
+            <thead>
+                <tr>
+                    <th class="col-6 table-headerLv2" id="basicInfoH">
+                        <h5><b>Basic Info</b></h5>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-lg-6 cells cellsTop cellsLeft"><b>Blockchain Address</b></td>
+                    
+                    <td class="col-3 cells cellsRight" id="prevBlockNumberH"><b>Previous block number</b></td>
+                    <td class="col-3 cells" id="prevBlockHashH"><b>Previous block hash</b></td>
+                </tr>
+                <tr>
+                    <td class="col-6 cells cellsLeft">{{address.blockchainAddress}} </td>
+                    <td class="col-3 cells cellsRight" id="prevBlockNumberRecord">1sa51d96qw81d6as51fqw</td>
+                    <td class="col-3 cells" id="prevBlockHashRecord">9safgasjdqwd14654asd</td>
+                </tr>
+                <tr>
+                    <td class="col-3 cells" id="blockTimeCellH">Nonce</td>
+                    <td class="col-3 cells cellsLeft" id="blockTimeCell">{{address.nonce}}</td>
+                    
+                </tr>
+                <tr>
+                    <td class="col-12 d-flex justify-content-center" id="additionalInfo"><b>Chx Balance Info</b></td>
+                </tr>
+                <tr>
+                    <td class="col-3 cellBorder">Avaliable balance</td>
+                    <td class="col-9 cellBorder">: {{address.chxBalanceInfo.availableBalance}}</td>
+                </tr>
+                <tr>
+                    <td class="col-3 cellBorder">Delegated stakes</td>
+                    <td class="col-9 cellBorder">: {{address.chxBalanceInfo.delegatedStakes}}</td>
+                </tr>
+                <tr>
+                    <td class="col-3 cellBorder">Validator deposit</td>
+                    <td class="col-9 cellBorder">: {{address.chxBalanceInfo.validatorDeposit}}</td>
+                </tr>
+                <tr>
+                    <td class="col-3 cellBorder" id="consensusCellLeft">Total balance</td>
+                    <td class="col-9 cellBorder" id="consensusCellRight">: {{address.chxBalanceInfo.totalBalance}}</td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+    
+    <!--
+    <div class="col-12">
+        <table class="table table-fixed">
+            <tbody>
+                <tr>
+                    <td class="col-12 d-flex justify-content-center" id="additionalInfo"><b>Transactions</b></td>
+                </tr>
+                <tr>
+                    <td class="col-5 cellBorder" id="txHashCell">Transaction hash </td>
+                    <td class="col-5 cellBorder">Sender address</td>
+                    <td class="col-2 cellBorder" id="actionCell">Action</td>
+                </tr>
+                <tr>
+                    <td class="col-5 cellBorder">{{tr.hash}} </td>
+                    <td class="col-5 cellBorder"><a routerLink="/addresses/{{tr.senderAddress}}">{{tr.senderAddress}}</a></td>
+                    <td class="col-2 cellBorder">{{tr.numberOfActions}}</td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>-->
+

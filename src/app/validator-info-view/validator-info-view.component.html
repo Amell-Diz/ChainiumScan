@@ -1,5 +1,40 @@
-<h3>Validator info</h3>
-<p>Validator address: {{validator_.blockchainAddress}}</p>
-<p>Network address: {{validator_.networkAddress}}</p>
-<p>Shared reward percent: {{validator_.sharedRewardPercent}}</p>
-<p>Is active: {{validator_.isActive}}</p>
+<div class="container-fluid row" id="mainArea">
+
+    <div class="col-12" id="firstTable">
+        <table class="table table-fixed">
+            <thead>
+                <tr>
+                    <th class="col-6 table-headerLv2" id="basicInfoH">
+                        <h5><b>Basic Info</b></h5>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-6 cells cellsTop cellsLeft"><b>Validator address</b></td>
+                    <td class="col-6 cells cellsRight" id="networkAddressHeader"><b>Network address</b></td>
+                </tr>
+                <tr>
+                    <td class="col-6 cells cellsLeft">{{validator_.blockchainAddress}} </td>
+                    <td class="col-6 cells cellsRight">{{validator_.networkAddress}}</td>
+                </tr>
+                <tr>
+                    <td class="col-3 cells" id="activeStatusFlagHeader">Active status flag</td>
+                    <td class="col-3 cells cellsLeft" id="activeStatusFlagRecord"><i class="fa fa-check-circle"></i> {{validator_.isActive}} </td>
+                    <td class="col-3 cellsHidden cellsRight" id="sharedRewardHeader">Shared reward</td>
+                    <td class="col-3 cellsHidden" id="sharedRewardRecord">{{validator_.sharedRewardPercent}}%</td>
+                </tr>
+                <tr>
+                    <td class="col-12 d-flex justify-content-center" id="listOfStakes"><b>List of stakes</b></td>
+                </tr>
+                <tr>
+                    <td class="col-3 cellBorder">Staker address</td>
+                    <td class="col-9 cellBorder">: {{block_.txSetRoot}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
