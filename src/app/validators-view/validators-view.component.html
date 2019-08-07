@@ -7,7 +7,7 @@
 </div>
 
 -->
-<div *ngIf="val.isActive == true">content</div>
+
 
 <div class="container d-flex justify-content-center" id="blockContainer">
     <table class="table table-fixed">
@@ -21,14 +21,8 @@
         </tr>
       </thead>
       <tbody>
-        <!--
-        <tr *ngFor="let block of latestBlocks | paginate: { itemsPerPage: 12, currentPage: p}">
-          <td class="col-4"><i class="fa fa-cube"></i><a routerLink="/blocks/{{block.blockNumber}}"> {{block.blockNumber}}</a></td>
-          <td class="col-6">#{{block.hash | slice:0:15}}</td>
-          <td class="col-2 d-flex justify-content-center">{{block.timestamp | date : 'H:mm:ss' : '+0400'}}</td>
-        </tr>
-        -->
-        <tr *ngFor="let val of validators">
+        
+        <tr *ngFor="let val of validators | paginate: { itemsPerPage: 10, currentPage: p, totalItems: limit}">
           <td class="col-6 cellBorder"><a routerLink="/validators/{{val.blockchainAddress}}">{{val.blockchainAddress}}</a></td>
           <td class="col-6 cellBorder">{{val.isActive}}</td>
         </tr>

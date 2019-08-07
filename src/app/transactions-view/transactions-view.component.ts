@@ -10,9 +10,11 @@ import {interval} from 'rxjs';
   styleUrls: ['./transactions-view.component.css']
 })
 export class TransactionsViewComponent implements OnInit {
+    p: number = 1;
+    collection: any[];
     timer=interval(3000);
     latestTransactions:Transaction[];
-  limit:Number=5;
+    limit:number;
 
   
   

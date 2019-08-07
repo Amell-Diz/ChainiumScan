@@ -10,7 +10,10 @@ import {interval} from 'rxjs';
   styleUrls: ['./validators-view.component.css']
 })
 export class ValidatorsViewComponent implements OnInit {
-  private validators:Validator[];
+    p: number = 1;
+    collection: any[];
+    limit:number;
+    validators:Validator[];
 
   constructor(private validatorsService:ValidatorsService) { }
 

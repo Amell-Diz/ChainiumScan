@@ -8,7 +8,7 @@ import { OwnApiResponse } from './ownapiresponse.model';
 })
 export class TransactionsService {
   private apiBaseUrl_:string='http://localhost:9090/';
-  private apiTransactionsUrl_=this.apiBaseUrl_+'txs';
+  private apiTransactionsUrl_=this.apiBaseUrl_+'txs?limit=1000';
   private apiTransactionByHashUrl_=this.apiBaseUrl_+'tx/';
  
   constructor(private http:HttpClient) { }

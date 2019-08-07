@@ -16,6 +16,7 @@
 
 #footer-window-right{
     color: var(--textColor);
+    padding-top: 2rem;
 }
 
 .row-height {
@@ -36,10 +37,13 @@
     background-color:var(--accent);
     width: 100%;
     border-radius: 8px;
+    transition: 0.2s;
 }
 
 .btn:hover{
     border: 1px solid var(--textColor);
+    box-shadow: 0 0 5px #d45c06, 0 0 20px #d45c06, 0 0 5px #d45c06;
+    transition-delay: 0.1s;
 }
 
 .btn a {

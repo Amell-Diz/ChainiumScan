@@ -1,23 +1,28 @@
-<div class="container-fluid row" id="txContainer">
-  <table class="table table-fixed">
-    <thead>
-      <tr>
-        <th class="col-12 d-flex justify-content-center table-header"><h4><b>Latest Transactions</b></h4></th>
-      </tr>
-      <tr>
-        <th class="col-4 cellBorder">Transaction <br> Hash</th>
-        <th class="col-3 cellBorder">Block<br>number</th>
-        <th class="col-3 cellBorder">Sender<br>address</th>
-        <th class="col-2 cellBorder d-flex justify-content-center">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let tr of latestTransactions | slice:0:50; let i=index;">
-        <td class="col-4 cellBorder">#<a routerLink="transactions/{{tr.hash}}" title="{{tr.hash}}">{{tr.hash}}...</a></td>
-        <td class="col-3 cellBorder"><i class="fa fa-cube"></i> <a routerLink="blocks/{{tr.blockNumber}}"> {{tr.blockNumber}}</a></td>
-        <td class="col-3 cellBorder">{{tr.senderAddress | slice:0:15}}...</td>
-        <td class="col-2 cellBorder d-flex justify-content-center">{{tr.numberOfActions}}</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container-fluid" id="wrap">
+    <table class="table table-fixed table-hover">
+    
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th class="sticky-top" colspan="4" id="table-header" >
+                    <h4>
+                        <b>Latest Transactions</b>
+                    </h4>
+                </th>
+            </tr>
+        </thead>
+    
+        <!-- Table Body -->
+        <tbody>
+            <tr *ngFor="let tr of latestTransactions | slice:0:50; let i=index;">
+                <td data-toggle="tooltip" title="Transaction Hash">#<a routerLink="transactions/{{tr.hash}}" title="{{tr.hash}}">{{tr.hash}}</a></td>
+                <td data-toggle="tooltip" title="Transaction's Block Number"><i class="fa fa-cube"></i> <a routerLink="blocks/{{tr.blockNumber}}"> {{tr.blockNumber}}</a></td>
+                <td data-toggle="tooltip" title="Sender's address">{{tr.senderAddress}}</td>
+                <td data-toggle="tooltip" title="Number of actions">{{tr.numberOfActions}}</td>
+            </tr>
+        </tbody>
+        
+    </table>
 </div>
+               
+        

@@ -1,26 +1,79 @@
-  <div class="container d-flex justify-content-center" id="blockContainer">
-        <table class="table table-fixed">
-          <thead>
-            <tr>
-              <th class="col-12 d-flex justify-content-center table-header"><h4><b>Transactions List</b></h4></th>
-            </tr>
-            <tr>
-                <th class="col-4">Transaction hash</th>
-                <th class="col-2">Block number</th>
-                <th class="col-2">Timestamp</th>
-                <th class="col-2">Sender address</th>
-                <th class="col-2 d-flex justify-content-center">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-                <tr *ngFor="let tr of latestTransactions | paginate: { itemsPerPage: 12, currentPage: p}">
-                        <td class="col-4 cellBorder">#<a routerLink="/transactions/{{tr.hash}}" title="{{tr.hash}}"> {{tr.hash | slice:0:20}}</a></td>
-                        <td class="col-2 cellBorder"><i class="fa fa-cube"></i><a routerLink="/blocks/{{tr.blockNumber}}"> {{tr.blockNumber}}</a></td>
-                        <td class="col-2 cellBorder">{{tr.timestamp | date:'dd.LLL, HH:mm:ss'}}</td>
-                        <td class="col-2 cellBorder">{{tr.senderAddress}}..</td>
-                        <td class="col-2 cellBorder d-flex justify-content-center">{{tr.numberOfActions}}</td>
-            </tr>
-          </tbody>
-          <pagination-controls (pageChange)="p = $event" class="d-flex justify-content-center myPagination"></pagination-controls>
-        </table>
-      </div>
+<!-- <div class="container d-flex justify-content-center" id="blockContainer">
+    <table class="table table-fixed">
+        <thead>
+        <tr>
+            <th class="col-12 d-flex justify-content-center table-header table-responsive"><h4><b>Transactions List</b></h4></th>
+        </tr>
+        <tr>
+
+            <th class="col-xl-2 col-lg-2 ">Block Number</th>
+            <th class="col-xl-4 col-lg-5">Transaction Hash</th>
+            <th class="col-xl-3 col-lg-2 d-flex justify-content-center">Timestamp</th>
+            <th class="col-xl-2 col-lg-2">Sender Address</th>
+            <th class="col-xl-1 col-lg-1 d-flex justify-content-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let tr of latestTransactions | paginate: { 
+            itemsPerPage: 10, 
+            currentPage: p, 
+            totalItems: limit}">
+            <td class="col-xl-2 col-lg-2  cellBorder"><i class="fa fa-cube"></i><a routerLink="/blocks/{{tr.blockNumber}}"> {{tr.blockNumber}}</a></td>
+            <td class="col-xl-4 col-lg-5 cellBorder">#<a routerLink="/transactions/{{tr.hash}}" title="{{tr.hash}}"> {{tr.hash | slice:0:20}}</a></td>
+            <td class="col-xl-3 col-lg-2 cellBorder d-flex justify-content-center">{{tr.timestamp | date:'dd.LLL, HH:mm:ss'}}</td>
+            <td class="col-xl-2 col-lg-2 cellBorder">{{tr.senderAddress}}</td>
+            <td class="col-xl-1 col-lg-1 cellBorder d-flex justify-content-center">{{tr.numberOfActions}}</td>
+        </tr>
+        </tbody>
+        <pagination-controls (pageChange)="p = $event" class="d-flex justify-content-center myPagination"></pagination-controls>
+    </table>
+    </div>
+                
+        
+         -->
+
+         <div class="container-fluid" id="wrap">
+                <table class="table table-fixed table-hover">
+                
+                    <!-- Table Header -->
+                    <thead>
+                        <tr>
+                            <th class="sticky-top" colspan="5" id="table-header" >
+                                <h4>
+                                    <b>Latest Transactions</b>
+                                </h4>
+                            </th>
+                        </tr>
+                        <tr>
+                        <th class="">Block Number</th>
+            <th >Transaction Hash</th>
+            <th class=" d-flex justify-content-center">Timestamp</th>
+            <th >Sender Address</th>
+            <th class=" d-flex justify-content-center">Actions</th>
+        </tr>
+                    </thead>
+                
+                    <!-- Table Body -->
+                    <tbody>
+                            <tr *ngFor="let tr of latestTransactions | paginate: { 
+                                itemsPerPage: 10, 
+                                currentPage: p, 
+                                totalItems: limit}">
+                                <td class="  cellBorder"><i class="fa fa-cube"></i><a routerLink="/blocks/{{tr.blockNumber}}"> {{tr.blockNumber}}</a></td>
+                                <td class=" cellBorder">#<a routerLink="/transactions/{{tr.hash}}" title="{{tr.hash}}"> {{tr.hash}}</a></td>
+                                <td class=" cellBorder d-flex justify-content-center">{{tr.timestamp | date:'dd.LLL, HH:mm:ss'}}</td>
+                                <td class=" cellBorder">{{tr.senderAddress}}</td>
+                                <td class=" cellBorder d-flex justify-content-center">{{tr.numberOfActions}}</td>
+                            </tr>
+                    </tbody>
+                    
+                    
+                </table>
+                
+            </div>
+            <div class="container-fluid" id="pagDiv"> 
+                <pagination-controls (pageChange)="p = $event" class="d-flex justify-content-center myPagination"></pagination-controls>
+            </div>
+           
+                    
+            

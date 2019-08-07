@@ -11,12 +11,12 @@ import { AddressInfoViewComponent } from './address-info-view/address-info-view.
 import { ValidatorInfoViewComponent } from './validator-info-view/validator-info-view.component';
 
 const routes: Routes = [
-  { path: '', component: MainViewComponent },
+  { path: '', component: MainViewComponent},
   { path: 'blocks/:num', component: BlockInfoViewComponent },
   { path: 'transactions/:hash', component: TxInfoViewComponent },
-  { path: 'blocks', component: BlocksViewComponent },
-  { path: 'transactions', component: TransactionsViewComponent },
-  { path: 'validators', component: ValidatorsViewComponent },
+  { path: 'blocks', component: BlocksViewComponent},
+  { path: 'transactions', component: TransactionsViewComponent},
+  { path: 'validators', component: ValidatorsViewComponent},
   { path: 'addresses/:bca', component: AddressInfoViewComponent },
   { path: 'validators/:addr', component: ValidatorInfoViewComponent }
 ];

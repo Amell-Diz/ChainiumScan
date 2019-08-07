@@ -18,9 +18,9 @@
                 </tr>
                 <tr>
                     <td class="col-3 cells">{{block_.blockNumber}} </td>
-                    <td class="col-3 cells cellsLeft" style="padding-right: 2px">{{block_.hash | slice:0:20}}...</td>
+                    <td data-toggle="tooltip" title="{{block_.hash}}" class="col-3 cells cellsLeft" style="padding-right: 2px">{{block_.hash | slice:0:20}}...</td>
                     <td class="col-3 cells cellsRight"><a routerLink="/blocks/{{blockNumber}}">{{blockNumber_-1}}</a></td>
-                    <td class="col-3 cells">{{prevBlock.hash | slice:0:15}}...</td>
+                    <td data-toggle="tooltip" title="{{prevBlock.hash}}" class="col-3 cells">{{prevBlock.hash | slice:0:15}}...</td>
                 </tr>
                 <tr>
                     <td class="col-3 cells" id="blockTimeCellH">Date created</td>
@@ -77,11 +77,6 @@
                     <td class="col-5 cellBorder" id="txHashCell">Transaction hash </td>
                     <td class="col-5 cellBorder">Sender address</td>
                     <td class="col-2 cellBorder" id="actionCell">Action</td>
-                </tr>
-                <tr>
-                    <!-- <td class="col-5 cellBorder">{{tr.hash}} </td>
-                    <td class="col-5 cellBorder"><a routerLink="/addresses/{{tr.senderAddress}}">{{tr.senderAddress}}</a></td>
-                    <td class="col-2 cellBorder">{{tr.numberOfActions}}</td> -->
                 </tr>
             </tbody>
         </table>

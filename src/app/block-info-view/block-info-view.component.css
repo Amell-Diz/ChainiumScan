@@ -8,12 +8,12 @@
   }
   
   #mainArea {
-      margin: 4rem auto;
+      margin: 3rem auto;
       width: 70vw;
   }
 
 #firstTable { 
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
   
   .table-fixed {
@@ -26,6 +26,7 @@
   .table-fixed tbody {
     overflow-y: hidden;
     width: 100%;
+    overflow-x: auto;
   }
   
   .table-fixed thead {
@@ -106,9 +107,11 @@
 }
 #cellsRightBottomLeft {
     border-radius: 0 0 0 16px;
+    color: var(--bg-lighter);
 }
 #cellsRightBottomRight {
     border-radius: 0 0 16px 0;
+    color: var(--bg-lighter);
 }
 #additionalInfo  {
     background-image: linear-gradient(#EC6608, #db8c2b);

@@ -9,7 +9,7 @@ import { OwnApiResponse } from './ownapiresponse.model';
 
 export class BlocksService {
   private apiBaseUrl_:string='http://localhost:9090/';
-  private apiGetBlocksUrl_:string=this.apiBaseUrl_+'blocks';
+  private apiGetBlocksUrl_:string=this.apiBaseUrl_+'blocks?limit=1000';
   private apiGetBlockByNumber_:string=this.apiBaseUrl_+'block/';
 
   private blockNumber_:string;

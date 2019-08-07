@@ -14,7 +14,7 @@ export class BlocksComponent implements OnInit {
 
   latestBlocks:Block[]=new Array;
 
-  timer=interval(3000);
+  timer=interval(1000);
 
   constructor(private blocksService:BlocksService) { }
 

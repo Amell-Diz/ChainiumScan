@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Observable, of, Subject } from 'rxjs';
+import { map, filter, catchError, mergeMap } from 'rxjs/operators';
+import { from } from 'rxjs';
+
 
 
 @Injectable({
@@ -13,7 +14,10 @@ export class TxPerDayService {
 
     txPerDay() {
       return this._http.get("http://localhost:9090/stat/tx-per-day?numberOfDays=7") 
-        .pipe(map(result => result));
+        .pipe(
+            map(result => result)
+            );
+        
     }
   
 }

@@ -23,8 +23,10 @@ import { ValidatorInfoViewComponent } from './validator-info-view/validator-info
 import { DateFormatPipePipe } from './pipes/date-format-pipe.pipe';
 import { TxPerDayService } from './charts/tx-per-day.service';
 import { NgxPaginationModule } from 'ngx-pagination';
-import {TimeAgoPipe} from 'time-ago-pipe';
-
+import { TimeAgoPipe } from 'time-ago-pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { Chart } from 'chart.js';
+ 
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import {TimeAgoPipe} from 'time-ago-pipe';
     AddressInfoViewComponent,
     ValidatorInfoViewComponent,
     DateFormatPipePipe,
-    TimeAgoPipe
+    TimeAgoPipe,
+ 
 
   ],
   imports: [
@@ -53,7 +56,9 @@ import {TimeAgoPipe} from 'time-ago-pipe';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    
   ],
   exports: [
     DateFormatPipePipe

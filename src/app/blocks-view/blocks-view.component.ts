@@ -14,9 +14,9 @@ export class BlocksViewComponent implements OnInit {
   p: number = 1;
   collection: any[];
   latestBlocks:Block[]=[];
-  limit:Number=10;
+  limit:number;
   timer=interval(3000);
-  constructor(private blocksService:BlocksService) { }
+  constructor(private blocksService:BlocksService) {   }
 
   ngOnInit() {
   this.getLatestBlocks();

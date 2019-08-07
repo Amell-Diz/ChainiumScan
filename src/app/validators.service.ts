@@ -10,7 +10,7 @@ import { OwnApiResponse } from './ownapiresponse.model';
 })
 export class ValidatorsService {
   private apiBaseUrl_:string='http://localhost:9090/';
-  private apiValidators_:string=this.apiBaseUrl_+'validators';
+  private apiValidators_:string=this.apiBaseUrl_+'validators?limit=100';
   private apiValidatorByAddress_:string=this.apiBaseUrl_+'validator/';
 
   constructor(private http:HttpClient) { }

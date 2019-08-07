@@ -38,9 +38,15 @@ img {
     font-size: 1rem;
     color: var(--textColor);
     font-family: averta;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
 }
 .individual-link-holder a:hover{
-    color: var(--accent);
+    color: var(--textColor);
+    background: var(--accentHover);
+    box-shadow: 0 0 5px #d45c06, 0 0 20px #d45c06, 0 0 5px #d45c06;
+    transition-delay: 0.1s;
 }
 .individual-link-holder a:focus{
     color: var(--accent);
